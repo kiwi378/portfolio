@@ -38,11 +38,25 @@
         </div>
     </main>
 
-    <section id="audio">
-  <h2>My Favorite Track</h2>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/pRXjyxQAKko?autoplay=0" 
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
+        <!-- 🔊 Button to Start Background Music -->
+        <button onclick="playMusic()" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000;">
+            ▶ Play Music
+        </button>
+
+        <div id="music-player" style="display: none;"></div>
+
+        <script>
+            function playMusic() {
+                const player = document.getElementById('music-player');
+                player.innerHTML = `
+            <iframe width="0" height="0"
+                src="https://www.youtube.com/embed/EYy27Cha7_Y?autoplay=1"
+                frameborder="0"
+                allow="autoplay; encrypted-media">
+            </iframe>
+        `;
+            }
+        </script>
 
     <footer>
         <p>&copy; 2025 Ewe Yi Keat. All Rights Reserved.</p>
